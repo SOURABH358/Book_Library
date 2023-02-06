@@ -1,14 +1,10 @@
-import { useState } from "react";
 import BookSection from "./BookSection";
 import SubjectSection from "./SubjectSection";
 
-export default function Home(){
-    const [show,setShow] = useState('')
-    return <div className="App">
+export default function Home() {
+  return <div className="App">
+    <SubjectSection />
+    <BookSection />
 
-    <SubjectSection show={show}
-    setShow={setShow}/>
-    <BookSection setShow={setShow}/>
-    
   </div>
 }
