@@ -6,7 +6,7 @@ export default function BookSection(){
     const [result, setResult] = useState(null);
     function showResult(){
         if(result===null)
-        return <div className = "wait"></div>
+        return <div className = "wait">Nothing to Display</div>
             return <ResultSection
                 data={result}
                 />

@@ -7,9 +7,20 @@ export default function ResultSection({ data }) {
     }
     return <section className="result__section">
         <div className="result__container">
+        <div className="result result__title">
+            <p>Title</p>
+            <p>Author</p>
+            <p>Last Publish Year</p>
+            <p>First Publish Year</p>
+        </div>
             {data.map((item,i) => {
                 if (i>(count-1)*10 && i<count*10)
-                return <div className="result">{item.title}</div>
+                return <div className="result">
+                    <p>{item.title}</p>
+                    <p>Toeklin</p>
+                    <p>12 Jan 2023</p>
+                    <p>Toeklin</p>
+                </div>
             })}
 
         </div>
