@@ -30,12 +30,12 @@
 
   cursor: pointer;
   background-color: white;
-  color: black;
+  color: black !important;
 }
 
-.subject:hover {
-  background: #0096FF;
-  color: white;
+.subject:hover{
+  background-color: #0096FF;
+  color:white;
 }
 
 .search__subject {
@@ -178,21 +178,84 @@
   padding: 1rem 0rem;
   color: grey;
 }
-
+.subjects__page{
+  width: 40%;
+  margin: 4rem auto;
+}
+.subjects__page h2{
+  text-transform: capitalize;
+  text-align: center;
+  color: white;
+  background-color: #0096FF;
+  padding: 0.5rem 0rem;
+  border-radius: 0.5rem;
+}
+.books{
+  padding: 0.75rem 1rem;
+  border: 2px solid #0096FF;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.books:hover{
+  color: white;
+  background-color: #0096FF;
+}
+.menu{
+  display: none;
+}
+.icon{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.close{
+  display: none;
+}
 @media screen and (max-width: 600px) {
+  
   .App {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     margin: 0;
     width: 100%;
+    box-shadow: none;
   }
 
   .result__container {
-    height: fit-content;
+    height: 100%;
 
+  }
+  .subject__section{
+    min-height: 100vh;
+  }
+  .title{
+    text-align: center;
+  }
+  .searchbox__container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
   }
 
   .subject__section {
-    display: none;
+    position:absolute;
+    top:0;
+    left: -100%;
+    width: 100%;
+  }
+  .subjects__page{
+    width: 90%;
+  }
+  .menu{
+    display: block;
+  }
+  .show{
+    left:0;
+  }
+  .close{
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 }

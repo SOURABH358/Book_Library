@@ -1,24 +1,16 @@
-import { useEffect, useState } from 'react'
+import { Route, Routes } from 'react-router'
 import './App.css'
-import BookSection from './components/BookSection'
-import SubjectSection from './components/SubjectSection'
+import Home from './components/Home'
+import Subject from './components/Subjects'
 
 function App() {
-  useEffect(()=>{
-    async function getBooks(){
-      // await fetch('https://openlibrary.org/search.json?author=tokien')
-      
-      
-    }
-    // getBooks();
-
-  },[])
+  
   return (
-    <div className="App">
-
-      <SubjectSection/>
-      <BookSection/>
-    </div>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='subjects/:id' element={<Subject/>}/>
+    </Routes>
+    
   )
 }
 

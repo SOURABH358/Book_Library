@@ -2,7 +2,7 @@ import { useState } from "react";
 import ResultSection from "./ResultSection";
 import SearchBox from "./SearchBox";
 
-export default function BookSection(){
+export default function BookSection({setShow}){
     const [result, setResult] = useState(null);
     function showResult(){
         if(result===null)
@@ -11,9 +11,10 @@ export default function BookSection(){
                 data={result}
                 />
     }
-    return <section className="book__section">
+    return <section className={`book__section`}>
             <SearchBox 
-            setResult = {setResult}/>
+            setResult = {setResult}
+            setShow = {setShow}/>
             {showResult()}
             
     </section>

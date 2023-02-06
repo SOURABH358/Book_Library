@@ -1,4 +1,5 @@
-export default function SearchBox({setResult}) {
+import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
+export default function SearchBox({setResult,setShow}) {
     async function handleSubmit(e) {
         e.preventDefault();
         const query = e.target[0].value;
@@ -16,9 +17,10 @@ export default function SearchBox({setResult}) {
         }
     }
     return <div className="searchbox__container">
+            <div className="menu" onClick={()=>setShow('show')}><AiOutlineMenu className="icon"/></div>
         <form className="searchbox__section" onSubmit={(e) => { handleSubmit(e) }}>
         <input type="search" placeholder="Search book by title or author" />
-        <button type="submit" className="search__btn">🔍</button>
+        <button type="submit" className="search__btn"><AiOutlineSearch className="icon"/></button>
     </form>
     </div>
 }
