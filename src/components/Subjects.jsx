@@ -16,7 +16,7 @@ export default function Subject(){
         getSubject();
     },[])
     if (data.length===0 )
-    return <div className="no__result"></div>
+    return <div className="no__result"><p></p></div>
     return <div className="subjects__page">
         <h2>{id} Books</h2>
         {data.works.map((item,i)=>{

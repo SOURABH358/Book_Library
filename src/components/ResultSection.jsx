@@ -3,7 +3,7 @@ export default function ResultSection({ data }) {
     const [count, setCount] = useState(1);
     
     if (data.length === 0) {
-        return <div className="no__result"></div>
+        return <div className="no__result"><p></p></div>
     }
     return <section className="result__section">
         <div className="result__container">
