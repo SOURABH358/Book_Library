@@ -16,7 +16,7 @@
 
 .subject__container {
   /* border-right: 2px solid black; */
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 2rem 1rem;
   background-color: #99CCFF;
   display: flex;
@@ -52,12 +52,13 @@
   /* border-radius: 2rem; */
   width: 100%;
   font-size: 1.1rem;
+  color: black;
 }
 
 .search__subject button {
   margin-top: 2rem;
   width: 100%;
-  color: white;
+  color: black;
   font-size: 1.2rem;
   background-color: #0096FF;
   padding: 0.5rem rem;
@@ -102,11 +103,14 @@
   line-height: 1.5rem;
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
+  color: black;
 }
 
 .searchbox__section button {
   padding: 0.5rem 1rem;
   cursor: pointer;
+  color: black;
+
 }
 
 .result__container {
@@ -180,6 +184,17 @@
   text-align: center;
   padding: 1rem 0rem;
   color: grey;
+  position: relative;
+}
+.wait__container{
+  z-index: -1;
+  position: absolute;
+  bottom:1rem;
+  right: 5%;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
 }
 .subjects__page{
   width: 100%;
@@ -204,17 +219,15 @@
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 35% 20% 20% 25%;
   
 }
 .books p{
   margin: 0;
-  padding-right: 1rem;
-
 }
 .books__title{
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 35% 20% 20% 25%;
   padding: 0.5rem 1rem;
   background-color: #0096FF;
   color: white;
@@ -225,11 +238,15 @@
 }
 .books__title p{
   margin: 0;
-  padding-right: 1rem;
 }
 .books:hover{
   color: white;
   background-color: #0096FF;
+}
+.books p{
+  margin: 0;
+  padding-right: 1rem;
+  overflow: hidden;
 }
 .menu{
   display: none;
@@ -241,6 +258,7 @@
 .close{
   display: none;
 }
+
 @media screen and (max-width: 600px) {
   
   .App {
@@ -259,7 +277,9 @@
     min-height: 100vh;
   }
   .title{
+    width: 100%;
     text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .searchbox__container{
     display: flex;
@@ -269,19 +289,25 @@
   }
 
   .subject__section {
-    position:absolute;
+    position:fixed;
     top:0;
     left: -100%;
-    width: 100%;
+    width: 100vw;
+    margin: 0;
+    padding:0;
+
   }
   .subjects__page{
     width: 100%;
+
   }
   .menu{
     display: block;
   }
   .show{
-    left:0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
   }
   .close{
     display: block;
@@ -290,10 +316,10 @@
     right: 1rem;
   }
   .books__title{
-    width: 90%;
+    width: 95%;
   }
   .books{
-    width: 90%;
+    width: 95%;
   }
 }
 .no__result p{

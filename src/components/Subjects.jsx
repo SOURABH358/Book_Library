@@ -37,7 +37,7 @@ export default function Subject(){
     if (data.length===0 )
     return <div className="no__result"><p></p></div>
     return <div className="subjects__page">
-        <h2>{id} Books</h2>
+        <h2>Top 10 {id} Books</h2>
         <div className="books__title">
             <p>Title</p>
             <p>Author</p>

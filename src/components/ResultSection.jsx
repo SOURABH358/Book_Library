@@ -42,7 +42,7 @@ export default function ResultSection({ data,setData }) {
             }} disabled={count>1?false:true}>
                 Pre
             </button>
-            <div>{`${count}/${count}`}</div>
+            <div>{`Page ${count}`}</div>
             <button className="next" onClick={() => {
                 setCount(count + 1);
             }} >Next</button>
